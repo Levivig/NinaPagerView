@@ -196,6 +196,12 @@
                     customTopView.userInteractionEnabled = NO;
                     customTopView.exclusiveTouch = NO;
                     [customTopButton addSubview:customTopView];
+                    
+                    NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:customTopView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:customTopButton attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
+                    NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:customTopView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:customTopButton attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0];
+                    [customTopButton addConstraints:@[centerX, centerY]];
+                    [customTopButton setNeedsUpdateConstraints];
+                    [customTopButton layoutIfNeeded];
                 }
             }
             UIButton *changeButton = btnArray[i];
@@ -222,6 +228,12 @@
                     whites.userInteractionEnabled = NO;
                     whites.exclusiveTouch = NO;
                     [btnArray[yourPage] addSubview:whites];
+                    
+                    NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:whites attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:btnArray[yourPage] attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
+                    NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:whites attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:btnArray[yourPage] attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0];
+                    [btnArray[yourPage] addConstraints:@[centerX, centerY]];
+                    [btnArray[yourPage] setNeedsUpdateConstraints];
+                    [btnArray[yourPage] layoutIfNeeded];
                 }
             }
             UIButton *changeButton = btnArray[yourPage];
@@ -283,7 +295,13 @@
             customTopView.exclusiveTouch = NO;
             [topTabArray addObject:customTopView];
             [button addSubview:customTopView];
-            [customTopView setCenter:button.center];
+            
+            NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:customTopView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:button attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
+            NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:customTopView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:button attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0];
+            [button addConstraints:@[centerX, centerY]];
+            [button setNeedsUpdateConstraints];
+            [button layoutIfNeeded];
+            
         }else {
             button.titleLabel.font = [UIFont systemFontOfSize:_titlesFont];
             if ([_titleArray[i] isKindOfClass:[NSString class]]) {
@@ -319,6 +337,12 @@
                     whites.userInteractionEnabled = NO;
                     whites.exclusiveTouch = NO;
                     [btnArray[0] addSubview:whites];
+                    
+                    NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:whites attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:button attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
+                    NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:whites attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:button attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0];
+                    [button addConstraints:@[centerX, centerY]];
+                    [button setNeedsUpdateConstraints];
+                    [button layoutIfNeeded];
                 }
             }
         } else {

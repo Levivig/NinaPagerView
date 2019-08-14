@@ -283,6 +283,7 @@
             customTopView.exclusiveTouch = NO;
             [topTabArray addObject:customTopView];
             [button addSubview:customTopView];
+            [customTopView setCenter:button.center];
         }else {
             button.titleLabel.font = [UIFont systemFontOfSize:_titlesFont];
             if ([_titleArray[i] isKindOfClass:[NSString class]]) {

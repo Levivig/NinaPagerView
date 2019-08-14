@@ -56,6 +56,7 @@ static NSString *const kObserverPage = @"currentPage";
         self.frame = frame;
         titlesArray = titles;
         classArray = objects;
+        _topTabSpacing = 30.0;
     }
     return self;
 }
@@ -95,6 +96,7 @@ static NSString *const kObserverPage = @"currentPage";
     if (!_ninaBaseView) {
         _ninaBaseView = [[NinaBaseView alloc] initWithFrame:self.bounds WithTopTabType:_ninaPagerStyles];
         [_ninaBaseView addObserver:self forKeyPath:kObserverPage options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+        [_ninaBaseView setTopTabSpacing:_topTabSpacing];
     }
     return _ninaBaseView;
 }

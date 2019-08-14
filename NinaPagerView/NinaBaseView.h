@@ -46,6 +46,7 @@
 @property (strong, nonatomic) UIColor *btnSelectColor; /**< 选中的标题颜色 **/
 @property (strong, nonatomic) UIColor *underlineBlockColor; /**< 下划线或滑块颜色 **/
 @property (strong, nonatomic) UIColor *topTabColor; /**< topTab背景颜色 **/
+@property (nonatomic) CGFloat topTabSpacing;
 /**
  *  Init Method.
  *

@@ -201,6 +201,14 @@ typedef NS_ENUM(NSInteger, NinaPagerStyle) {
  **/
 @property (strong, nonatomic) NSArray *selectedTopTabViews;
 
+
+/**
+ Spacing between tab indicators.
+ Default 30.
+ Adds space between first tab too.
+ */
+@property (nonatomic) CGFloat topTabSpacing;
+
 @property (weak, nonatomic) id<NinaPagerViewDelegate>delegate; /**< NinaPagerView代理 **/
 
 @end

@@ -266,12 +266,13 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.tag = i;
 
-        CGFloat width = [_titleArray[i] widthForFont:[UIFont systemFontOfSize:+_titlesFont] height:CGFLOAT_MAX];
+        NSString *title = _titleArray[i];
+        CGFloat width = [title widthForFont:[UIFont systemFontOfSize:_titlesFont] height:CGFLOAT_MAX];
         if (i == 0) {
-            button.frame = CGRectMake(0, 0, width, _topHeight);
+            button.frame = CGRectMake(_topTabSpacing, 0, width, _topHeight);
         } else {
-            CGRect previousFrame = ((UIView*)topTabArray[i-1]).frame;
-            CGFloat lastX = previousFrame.origin.x + previousFrame.size.width;
+            CGRect previousFrame = ((UIView*)btnArray[i-1]).frame;
+            CGFloat lastX = previousFrame.origin.x + previousFrame.size.width + _topTabSpacing;
             button.frame = CGRectMake(lastX, 0, width, _topHeight);
         }
         

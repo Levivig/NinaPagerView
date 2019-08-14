@@ -11,6 +11,7 @@
 #import "UIParameter.h"
 #import "NinaBaseView.h"
 #import "UIView+ViewController.h"
+#import "NSString+FontUtility.h"
 
 //! Project version number for NinaPagerViewCarthage.
 FOUNDATION_EXPORT double NinaPagerViewCarthageVersionNumber;

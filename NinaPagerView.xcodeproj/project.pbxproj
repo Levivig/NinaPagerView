@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BD5D2B62304238B00C7615C /* NSstring+FontUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD5D2B52304238B00C7615C /* NSstring+FontUtility.m */; };
 		1F647E7A1EA5EDD50093E945 /* ShowControllersStyleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F647E791EA5EDD50093E945 /* ShowControllersStyleController.m */; };
 		1F647E7D1EA5EDE30093E945 /* ShowViewsStyleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F647E7C1EA5EDE30093E945 /* ShowViewsStyleController.m */; };
 		1F647E801EA5EE110093E945 /* ShowMixtureStyleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F647E7F1EA5EE110093E945 /* ShowMixtureStyleController.m */; };
@@ -72,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1BD5D2B42304238A00C7615C /* NSString+FontUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontUtility.h"; sourceTree = "<group>"; };
+		1BD5D2B52304238B00C7615C /* NSstring+FontUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSstring+FontUtility.m"; sourceTree = "<group>"; };
 		1F647E781EA5EDD50093E945 /* ShowControllersStyleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowControllersStyleController.h; sourceTree = "<group>"; };
 		1F647E791EA5EDD50093E945 /* ShowControllersStyleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowControllersStyleController.m; sourceTree = "<group>"; };
 		1F647E7B1EA5EDE30093E945 /* ShowViewsStyleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewsStyleController.h; sourceTree = "<group>"; };
@@ -157,6 +160,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BD5D2B32304237600C7615C /* NSString+FontUtility */ = {
+			isa = PBXGroup;
+			children = (
+				1BD5D2B42304238A00C7615C /* NSString+FontUtility.h */,
+				1BD5D2B52304238B00C7615C /* NSstring+FontUtility.m */,
+			);
+			path = "NSString+FontUtility";
+			sourceTree = "<group>";
+		};
 		1F647E751EA5EB2A0093E945 /* Example Styles */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +281,7 @@
 				4D03540C1CA2E45000576C7B /* Example */,
 				4D3C85C21CA4471B00514E62 /* NinaPagerView */,
 				76CEDFD71CBF79370074765F /* NinaPagerViewCarthage */,
+				1BD5D2B32304237600C7615C /* NSString+FontUtility */,
 				7682409B1BF5D32700788E48 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -377,6 +390,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -417,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76148E2E1CE1C39F00C922AF /* ThirdTableView.m in Sources */,
+				1BD5D2B62304238B00C7615C /* NSstring+FontUtility.m in Sources */,
 				1FE33FFE1EB89602004805B4 /* ReloadTabsObjectsController.m in Sources */,
 				4D0354381CA2E45000576C7B /* NinthViewController.m in Sources */,
 				1F647E801EA5EE110093E945 /* ShowMixtureStyleController.m in Sources */,

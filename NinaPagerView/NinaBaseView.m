@@ -21,6 +21,7 @@
 // SOFTWARE.
 
 #import "NinaBaseView.h"
+#import "NSString+FontUtility.h"
 #import "UIParameter.h"
 
 @implementation NinaBaseView
@@ -264,11 +265,16 @@
     for (NSInteger i = 0; i < _titleArray.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.tag = i;
-        if (_titleArray.count > 5) {
-            button.frame = CGRectMake(More5LineWidth * i, 0, More5LineWidth, _topHeight);
-        }else {
-            button.frame = CGRectMake(FUll_VIEW_WIDTH / _titleArray.count * i, 0, FUll_VIEW_WIDTH / _titleArray.count, _topHeight);
+
+        CGFloat width = [_titleArray[i] widthForFont:[UIFont systemFontOfSize:+_titlesFont] height:CGFLOAT_MAX];
+        if (i == 0) {
+            button.frame = CGRectMake(0, 0, width, _topHeight);
+        } else {
+            CGRect previousFrame = ((UIView*)topTabArray[i-1]).frame;
+            CGFloat lastX = previousFrame.origin.x + previousFrame.size.width;
+            button.frame = CGRectMake(lastX, 0, width, _topHeight);
         }
+        
         if (_topArray.count == _titleArray.count && _changeTopArray.count == _titleArray.count && (topTabType == 0 || topTabType == 2)) {
             UIView *customTopView = _topArray[i];
             customTopView.frame = button.bounds;
